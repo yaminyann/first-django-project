@@ -1,0 +1,23 @@
+:root{
+    --bg-color:#2E2E2E;
+}
+
+.coustom-bg-color{
+    background: var(--bg-color) !important;
+    color: #fff;
+}
+.btn-success{
+    background:var(--bg-color) !important;
+    color: #fff;
+    font-weight: 500;
+}
+/*---------------------------------------------------- */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0px; /* remove the gap so it doesn't close */
+}
+.navbar-nav > li{
+    padding-left:15px;
+    padding-right:15px;
+  }
+  /* navber end */

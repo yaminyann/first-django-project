@@ -1,0 +1,32 @@
+{% extends "common_code/base.html" %}
+{% load static %}
+{% block title %}<title>Hamlet | Contact</title>{% endblock title %}
+{% block content %}
+
+    <div class="container">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+            <p>{{error}}</p>
+            {% endfor %}
+            {% endif %}
+            <!-- form -->
+            <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div> -->
+
+            <div class="form-control py-3 mb-3 shadow-lg p-3 mb-5 bg-body rounded">
+                <h2 class="text-center font-monospace">Contact Us</h2>
+                <table class="d-flex align-item-center">{{form}}</table>
+                <input class="form-control btn btn-dark" type="submit" value="submit">
+                
+            </div>
+            
+            
+            
+        </form>
+    </div>
+
+{% endblock content %}
